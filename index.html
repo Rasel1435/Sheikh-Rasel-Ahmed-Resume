@@ -364,66 +364,135 @@
                 <!-- Portfolio Start -->
                 <section class="py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s">
                     <h1 class="title pb-3 mb-5">Portfolio</h1>
+
                     <div class="row">
                         <div class="col-12">
                             <div class="row">
-                                <div class="col-12 text-center mb-2">
+                                <div class="col-12 text-center mb-4">
+                                    <!-- Portfolio Filters -->
                                     <ul class="list-inline mb-4" id="portfolio-flters">
                                         <li class="btn btn-secondary active" data-filter="*"><i
                                                 class="fa fa-star me-2"></i>All</li>
-                                        <li class="btn btn-secondary" data-filter=".first"><i
-                                                class="fa fa-laptop-code me-2"></i>Design</li>
-                                        <li class="btn btn-secondary" data-filter=".second"><i
-                                                class="fa fa-mobile-alt me-2"></i>Development</li>
+                                        <li class="btn btn-secondary" data-filter=".ml"><i
+                                                class="fa fa-robot me-2"></i>ML</li>
+                                        <li class="btn btn-secondary" data-filter=".dl"><i
+                                                class="fa fa-brain me-2"></i>DL</li>
+                                        <li class="btn btn-secondary" data-filter=".cv"><i
+                                                class="fa fa-image me-2"></i>CV</li>
+                                        <li class="btn btn-secondary" data-filter=".ai"><i
+                                                class="fa fa-lightbulb me-2"></i>AI / NLP</li>
+                                        <li class="btn btn-secondary" data-filter=".web"><i
+                                                class="fa fa-laptop-code me-2"></i>Web / Backend</li>
                                     </ul>
                                 </div>
                             </div>
+
                             <div class="row portfolio-container">
-                                <div class="col-md-6 mb-4 portfolio-item first">
+
+                                <!-- ML Project: Taxi Demand -->
+                                <div class="col-md-6 mb-4 portfolio-item ml web">
                                     <div class="position-relative overflow-hidden mb-2">
-                                        <img class="img-fluid w-100" src="img/portfolio-1.jpg" alt="">
+                                        <img class="img-fluid w-100" src="img/portfolio-1.jpg"
+                                            alt="Taxi Demand Project">
                                         <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                            <a href="img/portfolio-1.jpg" data-lightbox="portfolio">
-                                                <i class="bi bi-plus text-light"></i>
+                                            <a href="https://yellow-taxi-demand-analysis.streamlit.app/"
+                                                target="_blank">
+                                                <i class="bi bi-link-45deg text-light"></i>
                                             </a>
                                         </div>
                                     </div>
+                                    <h5 class="text-center">Yellow Taxi Demand Forecasting</h5>
+                                    <p class="text-center">Real-time demand prediction using ML pipelines, feature
+                                        engineering, Docker, and AWS deployment with API integration.</p>
                                 </div>
-                                <div class="col-md-6 mb-4 portfolio-item second">
+
+                                <!-- ML Project: House Price Prediction -->
+                                <div class="col-md-6 mb-4 portfolio-item ml web">
                                     <div class="position-relative overflow-hidden mb-2">
-                                        <img class="img-fluid w-100" src="img/portfolio-2.jpg" alt="">
+                                        <img class="img-fluid w-100" src="img/portfolio-2.jpg"
+                                            alt="House Price Prediction">
                                         <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                            <a href="img/portfolio-2.jpg" data-lightbox="portfolio">
-                                                <i class="bi bi-plus text-light"></i>
+                                            <a href="#" target="_blank">
+                                                <i class="bi bi-link-45deg text-light"></i>
                                             </a>
                                         </div>
                                     </div>
+                                    <h5 class="text-center">House Price Prediction</h5>
+                                    <p class="text-center">Regression model for real estate pricing with Python, feature
+                                        engineering, and backend API integration.</p>
                                 </div>
-                                <div class="col-md-6 mb-4 portfolio-item first">
+
+                                <!-- ML Project: Student Score Predictor -->
+                                <div class="col-md-6 mb-4 portfolio-item ml web">
                                     <div class="position-relative overflow-hidden mb-2">
-                                        <img class="img-fluid w-100" src="img/portfolio-3.jpg" alt="">
+                                        <img class="img-fluid w-100" src="img/portfolio-3.jpg"
+                                            alt="Student Score Predictor">
                                         <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                            <a href="img/portfolio-3.jpg" data-lightbox="portfolio">
-                                                <i class="bi bi-plus text-light"></i>
+                                            <a href="#" target="_blank">
+                                                <i class="bi bi-link-45deg text-light"></i>
                                             </a>
                                         </div>
                                     </div>
+                                    <h5 class="text-center">Student Exam Score Predictor</h5>
+                                    <p class="text-center">Predicting exam scores using ML regression models and backend
+                                        integration for data collection.</p>
                                 </div>
-                                <div class="col-md-6 mb-4 portfolio-item second">
+
+                                <!-- CV Project: Player Analytics -->
+                                <div class="col-md-6 mb-4 portfolio-item cv web">
                                     <div class="position-relative overflow-hidden mb-2">
-                                        <img class="img-fluid w-100" src="img/portfolio-4.jpg" alt="">
+                                        <img class="img-fluid w-100" src="img/portfolio-4.jpg"
+                                            alt="Player Analytics">
                                         <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                                            <a href="img/portfolio-4.jpg" data-lightbox="portfolio">
-                                                <i class="bi bi-plus text-light"></i>
+                                            <a href="#" target="_blank">
+                                                <i class="bi bi-link-45deg text-light"></i>
                                             </a>
                                         </div>
                                     </div>
+                                    <h5 class="text-center">ML-Powered Player Analytics</h5>
+                                    <p class="text-center">Football player video analysis using OpenCV and ML pipelines
+                                        with Django REST API integration.</p>
                                 </div>
+
+                                <!-- AI / NLP Project: Chatbot -->
+                                <div class="col-md-6 mb-4 portfolio-item ai web">
+                                    <div class="position-relative overflow-hidden mb-2">
+                                        <img class="img-fluid w-100" src="img/portfolio-dummy5.jpg" alt="AI Chatbot">
+                                        <div class="portfolio-btn d-flex align-items-center justify-content-center">
+                                            <a href="#" target="_blank">
+                                                <i class="bi bi-link-45deg text-light"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <h5 class="text-center">AI Chatbot Integration</h5>
+                                    <p class="text-center">NLP system integrated into a web application for automated
+                                        user interactions and support.</p>
+                                </div>
+
+                                <!-- DL Project: Image Classifier -->
+                                <div class="col-md-6 mb-4 portfolio-item dl web">
+                                    <div class="position-relative overflow-hidden mb-2">
+                                        <img class="img-fluid w-100" src="img/portfolio-dummy6.jpg"
+                                            alt="DL Image Classifier">
+                                        <div class="portfolio-btn d-flex align-items-center justify-content-center">
+                                            <a href="#" target="_blank">
+                                                <i class="bi bi-link-45deg text-light"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <h5 class="text-center">Deep Learning Image Classifier</h5>
+                                    <p class="text-center">CNN-based image classification with PyTorch/TensorFlow and
+                                        backend integration for inference APIs.</p>
+                                </div>
+
                             </div>
                         </div>
                     </div>
                 </section>
                 <!-- Portfolio End -->
+
+
+
 
                 <!-- Testimonial Start -->
                 <section class="py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s">
