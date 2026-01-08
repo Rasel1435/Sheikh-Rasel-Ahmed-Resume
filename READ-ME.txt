@@ -1,9 +1,3 @@
-  =>  Template Name    : DarkCV - Bootstrap CV Resume Template
+  =>  Template Author    : Sheikh Rasel Ahmed
 
-  =>  Template Link    : https://htmlcodex.com/bootstrap-cv-resume-template
-
-  =>  Template License : https://htmlcodex.com/license (or read the LICENSE.txt file)
-
-  =>  Template Author  : HTML Codex
-
-  =>  Author Website   : https://htmlcodex.com
+  =>  Author Website   : https://rasel1435.github.io/Sheikh-Rasel-Ahmed-Resume
