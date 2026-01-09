@@ -833,18 +833,21 @@
     <script src="js/main.js"></script>
 
     <script>
-        // Select all links inside the mobile navigation
-        const navLinks = document.querySelectorAll('#topNav .nav-link');
-        const menuCollapse = document.getElementById('topNav');
+        document.addEventListener('click', function (event) {
+            // 1. Check if the clicked element is a nav-link
+            if (event.target.classList.contains('nav-link')) {
+                const navbar = document.getElementById('topNav');
+                const toggler = document.querySelector('.navbar-toggler');
 
-        navLinks.forEach((link) => {
-            link.addEventListener('click', () => {
-                // Check if the menu is currently shown (mobile view)
-                if (menuCollapse.classList.contains('show')) {
-                    // This triggers Bootstrap's own collapse function to close the menu
-                    $(menuCollapse).collapse('hide');
+                // 2. If the menu is open (has the 'show' class), close it
+                if (navbar.classList.contains('show')) {
+                    // Remove 'show' class to hide menu
+                    navbar.classList.remove('show');
+                    // Update the hamburger button state for accessibility
+                    toggler.setAttribute('aria-expanded', 'false');
+                    toggler.classList.add('collapsed');
                 }
-            });
+            }
         });
     </script>
 </body>
