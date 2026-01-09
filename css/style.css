@@ -239,7 +239,7 @@ section[id] {
 
 html, body {
     /* 1. Prevents the header from covering your titles */
-    scroll-padding-top: 10px !important; 
+    scroll-padding-top: 5px !important; 
     
     /* 2. Makes the transition look professional instead of jumping */
     scroll-behavior: smooth;
@@ -249,7 +249,7 @@ html, body {
 @media (max-width: 991.98px) {
     html {
         /* If your mobile header is taller, adjust this number */
-        scroll-padding-top: 60px; 
+        scroll-padding-top: 20px; 
     }
 }
 
