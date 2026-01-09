@@ -237,7 +237,7 @@ section[id] {
 }
 
 
-html, body {
+html {
     /* 1. Prevents the header from covering your titles */
     scroll-padding-top: 5px !important; 
     

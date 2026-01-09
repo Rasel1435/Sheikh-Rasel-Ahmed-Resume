@@ -32,40 +32,7 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const sections = document.querySelectorAll("section[id]");
-        const navLinks = document.querySelectorAll(".navbar .nav-link");
 
-        function activateMenu() {
-            let scrollY = window.pageYOffset + 80;
-
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.offsetHeight;
-                const sectionId = section.getAttribute("id");
-
-                if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-                    navLinks.forEach(link => {
-                        link.classList.remove("active");
-                        if (link.getAttribute("href") === `#${sectionId}`) {
-                            link.classList.add("active");
-                        }
-                    });
-                }
-            });
-        }
-
-        window.addEventListener("scroll", activateMenu);
-
-        navLinks.forEach(link => {
-            link.addEventListener("click", function () {
-                navLinks.forEach(l => l.classList.remove("active"));
-                this.classList.add("active");
-            });
-        });
-    });
-</script>
 
 
 <body>
@@ -760,6 +727,8 @@
                 </section>
                 <!-- Contact End -->
 
+
+
                 <!-- JS to handle submission without page reload -->
                 <script>
                     document.getElementById('contactForm').addEventListener('submit', function (e) {
@@ -784,6 +753,7 @@
                         });
                     });
                 </script>
+
 
 
                 <!-- Footer Start -->
@@ -832,24 +802,66 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 
-    <script>
-        document.addEventListener('click', function (event) {
-            // 1. Check if the clicked element is a nav-link
-            if (event.target.classList.contains('nav-link')) {
-                const navbar = document.getElementById('topNav');
-                const toggler = document.querySelector('.navbar-toggler');
 
-                // 2. If the menu is open (has the 'show' class), close it
-                if (navbar.classList.contains('show')) {
-                    // Remove 'show' class to hide menu
-                    navbar.classList.remove('show');
-                    // Update the hamburger button state for accessibility
-                    toggler.setAttribute('aria-expanded', 'false');
-                    toggler.classList.add('collapsed');
-                }
+
+    <!--Nabbar Js Start-->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll("section[id]");
+            const navLinks = document.querySelectorAll(".navbar .nav-link");
+            const navbar = document.getElementById('topNav'); // Make sure this ID matches your HTML
+            const toggler = document.querySelector('.navbar-toggler');
+            let isScrolling = false;
+
+            function activateMenu() {
+                if (isScrolling) return;
+
+                let scrollY = window.pageYOffset + 120;
+
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.offsetHeight;
+                    const sectionId = section.getAttribute("id");
+
+                    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                        navLinks.forEach(link => {
+                            link.classList.remove("active");
+                            if (link.getAttribute("href").includes(sectionId)) {
+                                link.classList.add("active");
+                            }
+                        });
+                    }
+                });
             }
+
+            window.addEventListener("scroll", activateMenu);
+
+            navLinks.forEach(link => {
+                link.addEventListener("click", function () {
+                    // 1. Highlight the clicked link immediately
+                    isScrolling = true;
+                    navLinks.forEach(l => l.classList.remove("active"));
+                    this.classList.add("active");
+
+                    // 2. AUTO-HIDE the mobile menu
+                    if (navbar && navbar.classList.contains('show')) {
+                        navbar.classList.remove('show');
+                        if (toggler) {
+                            toggler.setAttribute('aria-expanded', 'false');
+                            toggler.classList.add('collapsed');
+                        }
+                    }
+
+                    // 3. Reset scroll listener after movement finishes
+                    setTimeout(() => { isScrolling = false; }, 1000);
+                });
+            });
         });
     </script>
+
+    <!--Nabbar Js End-->
+
+
 </body>
 
 </html>
