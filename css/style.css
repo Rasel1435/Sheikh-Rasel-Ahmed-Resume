@@ -225,5 +225,17 @@
 }
 
 
+.navbar .nav-link.active {
+    color: #ffffff !important;
+    font-weight: 600;
+    border-bottom: 2px solid #fced19;
+}
+
+
+section[id] {
+    scroll-margin-top: 80px;
+}
+
+
 
 /* ********** Template CSS End ********** */
